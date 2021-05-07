@@ -37,11 +37,11 @@ int solution::eq_01(int* arr, int n){
             csum--;
         }
 
-        if(csum==0){
+        if(csum == 0){
             mlen=max(mlen,i+1);
         }
 
-        if(mp1.find(csum)!=mp1.end()){
+        if(mp1.find(csum) != mp1.end()){
             mlen=max(mlen,i-mp1[csum]);
         }
         else{
