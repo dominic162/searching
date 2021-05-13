@@ -23,11 +23,11 @@ bool solution::sub_sum(int* arr, int n, int k){
     unordered_set<int> st;
     int csum=0;
     for(int i=0;i<n;++i){
-        csum+=arr[i];
-        if(csum==k){
+        csum += arr[i];
+        if(csum == k){
             return true;
         }
-        if(st.find(csum-k)!=st.end()){
+        if( st.find(csum-k) != st.end() ){
             return true;
         }
         st.insert(csum);

@@ -29,15 +29,15 @@ int solution::sub_sum(int* arr, int n, int k){
     unordered_map<int,int> mp1;
 
     for(int i=0; i<n ;++i){
-        csum+=arr[i];
-        if(csum==k){
+        csum += arr[i];
+        if(csum == k){
             mlen = i+1;
         }
 
-        if(mp1.find(csum-k)!=mp1.end()){
+        if( mp1.find(csum-k) != mp1.end() ){
             mlen = max(mlen,i-mp1[csum-k]);
         }
-        if(mp1.find(csum)==mp1.end()){
+        if(mp1.find(csum) == mp1.end()){
             mp1.insert({csum,i});
         }
 

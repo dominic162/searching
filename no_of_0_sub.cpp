@@ -19,7 +19,7 @@ class Solution{
             csum += arr[i];
             
             if(csum == 0){
-                ans+=1;
+                ans += 1;
             }
             
             if(mp1.find(csum) != mp1.end()){
